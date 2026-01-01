@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "1mO/qOonPUFPrJrRuGNYm3re6wNk18DXnWXRGGTwphU=",
+  "Source": "BackendJourney.Api",
+  "BasePath": "_content/BackendJourney.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
