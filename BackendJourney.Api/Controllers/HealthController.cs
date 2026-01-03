@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using BackendJourney.Api.Services;
 
 namespace BackendJourney.Api.Controllers
 {
@@ -6,13 +7,17 @@ namespace BackendJourney.Api.Controllers
     [Route("api/[Controller]")]
     public class HealthController : ControllerBase
     {
+        private readonly IHealthService _healthService;
+        public HealthController(IHealthService healthService) 
+        { 
+            _healthService = healthService;
+        }
+
         [HttpGet]
         public IActionResult Get() 
         {
-           return Ok(new{
-             status = "OK",
-             time = DateTime.UtcNow
-           });
-        }
+           var result = _healthService.GetHealthStatus();
+           return Ok(result);
+        } 
     }
 }
